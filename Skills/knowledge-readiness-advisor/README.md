@@ -4,7 +4,7 @@ Performs an executive Knowledge Management and Copilot Readiness assessment of b
 
 The skill evaluates accessible business content across exactly six dimensions: **Currency, Clarity, Consistency, Findability, Ownership, and AI Suitability**. It identifies evidence-based strengths, material risks, prioritized improvements, and questions for an initial client workshop.
 
-![Knowledge Readiness Advisor](./assets/full-demo.png)
+![preview](./assets/preview.png)
 
 ## What you get
 
@@ -252,3 +252,21 @@ The inner `knowledge-readiness-advisor` folder is the upload-ready runtime packa
 * Access to the business documents being assessed
 * Permission to use Copilot in the target SharePoint site
 * Permission to upload the runtime package to the site's Agent
+
+## SharePoint Skill
+
+| Solution | Author(s) |
+| --- | --- |
+| knowledge-readiness-advisor | Maycon de Novaes Batista &#124; [GitHub](https://github.com/mnbatista) &#124; [LinkedIn](https://www.linkedin.com/in/maycon-novaes/) |
+
+## Version history
+
+| Version | Date | Comments |
+| --- | --- | --- |
+| 1.0 | October 2026 | Initial Release |
+
+## Disclaimer
+
+**THIS CODE IS PROVIDED _AS IS_ WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
+
+<img src="https://m365-visitor-stats.azurewebsites.net/sharepoint-skills/skills/knowledge-readiness-advisor" />
