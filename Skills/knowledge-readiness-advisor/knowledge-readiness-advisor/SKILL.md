@@ -570,3 +570,71 @@ Display the overall result using this format:
 
 ```text
 Overall readiness: 🔴
+```
+
+The icon above is a format example, not a predetermined result.
+
+Choose the overall status from the evidence:
+
+- Use 🔴 when a confirmed material risk requires high-priority action, even if
+  evidence is insufficient for another dimension.
+- Otherwise, use ⚪ when evidence is insufficient to support an overall
+  assessment. Explain which missing evidence prevents a conclusion.
+- Use 🟡 when the evidence supports an assessment and relevant gaps require
+  attention, but no high-priority risk was identified.
+- Use 🟢 only when all six dimensions have sufficient evidence and are
+  generally adequate, with no material gap observed.
+
+Do not average dimension statuses or calculate a numerical score.
+
+## Required report structure
+
+Produce these sections in this order, translating their headings into the
+selected report language:
+
+1. **Documents in Scope**
+   List the documents actually read, using the evidence inventory above.
+   Preserve complete document titles and include accessible source links when
+   available. Never invent a link.
+2. **Executive Summary**
+   State the scope, the overall readiness status, the most important
+   evidence-based observations, and the decisions requiring client validation.
+3. **Readiness Traffic-Light Scorecard**
+   Use a table with exactly six rows in the mandatory dimension order.
+   Include columns for Dimension, Status, Evidence-based Assessment, and
+   Business Implication. Assign exactly one status icon per row.
+4. **Key Strengths**
+   Identify positive findings supported by the documents. If none can be
+   established, state that rather than inventing strengths.
+5. **Key Risks and Gaps**
+   For each material finding, identify the supporting documents, the observed
+   evidence, the business implication, and any uncertainty requiring client
+   validation. Distinguish missing evidence from confirmed deficiencies.
+6. **Prioritized Recommendations**
+   For each recommendation, state its priority, the finding it addresses,
+   the proposed action, the suggested accountable role or team, and the
+   expected outcome. Suggested responsibility is a recommendation, not an
+   assertion of existing ownership. Do not modify, archive, or delete content
+   as part of this assessment.
+7. **Client Conversation Starters**
+   Turn the findings into focused workshop questions about authoritative
+   sources, ownership and review, user experience, and Copilot or AI use.
+   Connect each question to its supporting finding and the decision it helps
+   the client make. Do not force questions unsupported by the evidence.
+8. **Scope and Limitations**
+   State the assessed scope, excluded content, inaccessible or unread
+   documents, missing evidence, assumptions, and the limits of the assessment.
+   Reiterate that the report is advisory, not formal readiness approval.
+
+## Final verification
+
+Before returning the report, verify that:
+
+- all eight report sections are present;
+- the scorecard contains exactly the six mandatory dimensions in order;
+- each dimension and the overall result have exactly one allowed status icon;
+- every substantive finding is grounded in documents actually read;
+- inaccessible content and insufficient evidence are disclosed;
+- recommendations and workshop questions follow from the findings;
+- no numerical readiness score, invented authority, or inferred owner appears;
+- the output follows the user's requested language.
