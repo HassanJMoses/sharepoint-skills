@@ -1,0 +1,45 @@
+[
+  {
+    "name": "pnp-sharepoint-skills-team-newsletter-publisher",
+    "source": "pnp",
+    "title": "Team Newsletter Publisher",
+    "shortDescription": "Converts a filled Team Newsletter Word file into a designed newsletter as a PDF and/or a self-contained HTML page using a fixed layout.",
+    "url": "https://github.com/pnp/sharepoint-skills/tree/main/Skills/team-newsletter-publisher",
+    "longDescription": [
+      "Reads a .docx created from the Team Newsletter Word template and maps every field — masthead, featured story with hero image, latest news, upcoming events, team spotlight, quick tips and contribution call — into a bundled HTML design master.",
+      "Text is copied exactly from the Word file and never invented. Empty slots are removed, sections are renumbered, and the output is saved as a self-contained HTML page and/or an A4 PDF next to the source file."
+    ],
+    "creationDateTime": "2026-10-13",
+    "updateDateTime": "2026-10-13",
+    "products": [
+      "SharePoint",
+      "Microsoft 365 Copilot"
+    ],
+    "metadata": [
+      { "key": "SAMPLE-TYPE", "value": "SharePoint-AI-Skill" },
+      { "key": "SKILL-CATEGORY", "value": "Document Management" }
+    ],
+    "thumbnails": [
+      {
+        "type": "image",
+        "order": 100,
+        "url": "https://github.com/pnp/sharepoint-skills/raw/main/Skills/team-newsletter-publisher/assets/preview.png",
+        "alt": "Team Newsletter Publisher skill output showing the designed newsletter masthead and featured story"
+      }
+    ],
+    "authors": [
+      {
+        "gitHubAccount": "anandragav",
+        "pictureUrl": "https://github.com/anandragav.png",
+        "name": "Anand Ragavan"
+      }
+    ],
+    "references": [
+      {
+        "name": "agentskills.io specification",
+        "description": "The specification that SharePoint AI skills follow for installation and discovery.",
+        "url": "https://agentskills.io/specification"
+      }
+    ]
+  }
+]
