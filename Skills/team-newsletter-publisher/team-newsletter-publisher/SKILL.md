@@ -9,10 +9,11 @@ Turn one filled Team Newsletter Word file into a finished newsletter that looks 
 
 ## Files in this skill
 - `newsletter-template.html` — the exact layout and CSS with `{{Field}}` placeholders. Treat it as the design master: keep its structure, class names and styles; only replace placeholders and remove hidden blocks.
+- `Team-Newsletter-Template.docx` — the Team Newsletter Word template that users fill in (or map in a SharePoint form). It defines the `{{Field}}` names this skill reads; give it to users who need a starting file.
 - `field-mapping.md` — where each Word field goes, its styling, length guidance, the empty-field rules, the hero-image rules, colours, type scale and a checklist.
 
 ## Inputs
-- One Word file (.docx) created from the Team Newsletter form/template. If the user has not selected one, ask which file to use (it normally sits in the same library as the template, e.g. "DUG Newsletter Demo").
+- One Word file (.docx) created from the Team Newsletter form/template (`Team-Newsletter-Template.docx` beside this file). If the user has not selected one, ask which file to use (it normally sits in the same library as the template, e.g. "DUG Newsletter Demo").
 - Output format: PDF, HTML or both. If not stated, create both.
 
 ## Instructions
@@ -27,7 +28,7 @@ Turn one filled Team Newsletter Word file into a finished newsletter that looks 
    - "4 · Team spotlight" → "Name — Role", then the story.
    - "5 · Quick tips" → title + body, twice.
    - "6 · Have something for the next issue?" → ContributeNote, then "Deadline for next issue:" + NextDeadline.
-   Ignore instruction text that is not content: "Hero image (map this field as Image)" and "Three short updates. Leave a slot empty if you have fewer stories."
+   Ignore instruction text that is not content: "Hero image (map this field as Image)", the bracketed note under {{FeaturedImage}} that starts "(Image from Word to HTML has shown mixed results" and "Three short updates. Leave a slot empty if you have fewer stories."
 2. **Treat a field as empty** when it is blank or still shows its placeholder (for example `{{News3_Title}}`).
 3. **Copy text exactly.** Do not rewrite, summarise, shorten, translate or add content. Never invent a value for an empty field. Keep paragraph breaks in FeaturedBody.
 4. **Hero image.** Use the picture embedded in the Featured story box of the Word file. Embed it (HTML: `data:` URI in `<img data-field="FeaturedImage">`; PDF: embedded image), full column width, 16:9 cropped to fill (object-fit: cover), max height 70 mm in print, alt text = FeaturedTitle. If there is no picture, remove the whole `<figure>` — never show the placeholder text, an empty box or a broken image.
