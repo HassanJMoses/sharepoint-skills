@@ -33,7 +33,7 @@ Turn a filled Learning Request Brief into a single self-contained HTML learning 
 - Cards must flip on hover and on keyboard focus (`:hover` and `:focus-within`).
 - Place the deck in its own section or after the relevant stage. Do not use static button quizzes for these items.
 
-- Do **not** add any organisational branding, logos, or text such as “Contoso”, company names, or site headers that are not present in the reference template.
+- Do **not** add any organisational branding, logos, or text such as company names or site headers that are not present in the reference template.
 - Clone only the structure and content from `references/test-output-custom-skills.html`. Do not invent or inject extra header elements.
 - If the generated page includes any external branding, remove it before finishing.
 
