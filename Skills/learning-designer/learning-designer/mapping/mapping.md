@@ -42,11 +42,11 @@ Maps fields from the Learning Request Brief (Structured Document Generation outp
 The image is always placed in the same visual position as the overview visual in the Custom Skills in PowerPoint example: prominent, near the top, supporting the opening explanation.
 
 - Maximum 3 stages (do not invent extra stages).
-- Use the established dashboard design system (navy/yellow palette, CSS-only flip cards, no JavaScript, self-contained HTML).
+- Use the established dashboard design system (navy/yellow palette, CSS-only flip cards, inline script only as in the reference page with no external scripts, libraries or CDNs, self-contained HTML).
 - Prefer Why / When / How / Check blocks for procedural content.
 - Ground content from `{AuthoritativeSource}` when provided; mark unverified items with a visible warning.
 - Keep the page usable without images (written instructions complete).
-- Output a single `.html` file ready to host or paste into a SharePoint text web part.
+- Output a single `.html` file. To publish it, save the file, upload it to a SharePoint document library, and open it from there. Do not paste it into a text web part, which removes the page's styles and script.
 
 ## Form → Brief → Dashboard flow
 

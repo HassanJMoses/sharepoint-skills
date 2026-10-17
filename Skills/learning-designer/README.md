@@ -6,7 +6,7 @@ Turns a filled Learning Request Brief (a .docx generated from a SharePoint Struc
 
 ## What you get
 
-- One self-contained `.html` learning dashboard (inline styles and SVGs, embedded image, no external assets), typically 40–70 KB
+- One self-contained `.html` learning dashboard (inline styles, SVGs and script, embedded image, no external assets or libraries), typically 40–70 KB
 - A hero with the topic, audience, goals and a duration chip (if supplied)
 - A learning-path rail with exactly the stages in the brief (1–3), and one section per stage using Why / When / How / Check blocks for procedural content
 - CSS flip-card decks built from the brief's flashcard concepts and knowledge checks, flipping on hover and keyboard focus
@@ -31,7 +31,7 @@ Select or attach a Learning Request Brief .docx generated from the form first. T
 2. Share the form. Required fields: LearningTopic, TargetAudience, LearningGoals and the three stage sets (Stage*N*Name, Stage*N*Description, Stage*N*KeyPoints).
 3. Each submission produces a filled Learning Request Brief .docx.
 4. Select or attach the brief and invoke the Learning Designer skill.
-5. Host the resulting HTML or paste it into a SharePoint text web part.
+5. Save the HTML file, upload it to a SharePoint document library, and open it from there. Don't paste it into a SharePoint text web part: text web parts remove the page's styles and script, so the layout, tabs and quizzes stop working.
 
 ## Package contents
 

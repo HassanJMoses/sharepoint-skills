@@ -33,7 +33,7 @@ Turn a filled Learning Request Brief into a single self-contained HTML learning 
 - Cards must flip on hover and on keyboard focus (`:hover` and `:focus-within`).
 - Place the deck in its own section or after the relevant stage. Do not use static button quizzes for these items.
 
-- Do **not** add any organisational branding, logos, or text such as “Business Sweden”, company names, or site headers that are not present in the reference template.
+- Do **not** add any organisational branding, logos, or text such as “Contoso”, company names, or site headers that are not present in the reference template.
 - Clone only the structure and content from `references/test-output-custom-skills.html`. Do not invent or inject extra header elements.
 - If the generated page includes any external branding, remove it before finishing.
 
@@ -76,10 +76,10 @@ Do not switch to a different design system. This file is the source of truth for
    - Footer with owner and source notes.
 
 5. **Validate**  
-   Confirm: no `<script>`, no `on*` handlers, no external assets, keyboard-reachable flip cards, prints fully. Copy the design-system CSS verbatim.
+   Confirm: the only script is the inline `<script>` block from the reference page (no external scripts, libraries or CDNs), no `on*` handlers, no external assets, keyboard-reachable flip cards, prints fully. Copy the design-system CSS verbatim.
 
 6. **Deliver**  
-   Save the HTML and give a short summary: topic, stages, any placeholders left, and that the page can be hosted or pasted into a SharePoint text web part.
+   Save the HTML and give a short summary: topic, stages, any placeholders left, and how to publish the page: save the HTML file, upload it to a SharePoint document library, and open it from there. Do not paste it into a SharePoint text web part. Text web parts remove the page's styles and script, so the layout, tabs and quizzes stop working.
 
 ## Field placement (quick reference)
 
@@ -99,8 +99,8 @@ Do not switch to a different design system. This file is the source of truth for
 
 ## Design system rules
 
-- CSS-only interactivity (`:hover` / `:focus-within` for flips, `<details>` for accordions).
-- No JavaScript.
+- Flip cards use CSS (`:hover` / `:focus-within`) and accordions use `<details>`, as in the reference page.
+- Inline script only, as in the reference page: keep its single inline `<script>` block for the tabs and quiz buttons. No external scripts, libraries or CDNs.
 - Self-contained (inline styles, inline SVGs).
 - Maximum 3 stages.
 - Written instructions must stand alone without images.
