@@ -79,7 +79,7 @@ Do not switch to a different design system. This file is the source of truth for
    Confirm: the only script is the inline `<script>` block from the reference page (no external scripts, libraries or CDNs), no `on*` handlers, no external assets, keyboard-reachable flip cards, prints fully. Copy the design-system CSS verbatim.
 
 6. **Deliver**  
-   Save the HTML and give a short summary: topic, stages, any placeholders left, and how to publish the page: save the HTML file, upload it to a SharePoint document library, and open it from there. Do not paste it into a SharePoint text web part. Text web parts remove the page's styles and script, so the layout, tabs and quizzes stop working.
+   Save the HTML and give a short summary: topic, stages, any placeholders left, and how to publish the page.
 
 ## Field placement (quick reference)
 
