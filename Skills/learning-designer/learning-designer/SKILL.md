@@ -16,7 +16,7 @@ Turn a filled Learning Request Brief into a single self-contained HTML learning 
 
 - Plain article or support page with no stages or interactivity.
 - General slide deck without the dashboard request.
-- Topics that require more than 3 stages (collapse or ask the user to revise the brief).
+- Topics that require more than 3 stages (ask the user to revise the brief before generating).
 
 ## Image handling
 
@@ -41,7 +41,7 @@ Use `references/test-output-custom-skills.html` as the exact structural and visu
 
 Match its:
 - Overall layout, CSS variables, and class names
-- Tab navigation (Overview / 1. Understand / 2. Use / 3. Build)
+- Tab navigation (Overview plus one tab per supplied stage, using the brief's stage names)
 - Hero with figure image placement
 - Card grids, control views, quiz blocks, and next-step buttons
 - Typography, spacing, and colour system
@@ -49,7 +49,9 @@ Match its:
 When generating a new dashboard:
 - Keep the CSS and JavaScript intact.
 - Replace only the content (headings, body text, stage names, quiz questions, practice text, image src if a new `learning-visual.png` is supplied).
-- Preserve the tab panel structure and interactive behaviour.
+- Replace all sample-topic content, including the page title, metadata, labels, footer and image; omit the reference image when no new visual is supplied.
+- Preserve the tab panel structure and interactive behaviour for the supplied stages. Use the existing stage IDs in order (`understand`, `use`, `build`), even when stage names change. Remove unused stage tabs, panels and learning-path tiles. Retarget every `data-next` button to the next supplied stage, or `overview` after the final stage.
+- The reference button quizzes are examples, not extra required content. Render the brief's FlashcardConcepts and KnowledgeChecks as CSS flip cards as specified above; remove unused sample quizzes.
 - Embed any new image as a base64 data URI in the same hero `<figure>` position.
 
 Do not switch to a different design system. This file is the source of truth for look and interaction.
@@ -57,10 +59,10 @@ Do not switch to a different design system. This file is the source of truth for
 ## Core workflow
 
 1. **Read the brief**  
-   Extract all fields from the attached/selected Learning Request Brief. Required fields: LearningTopic, TargetAudience, LearningGoals, and the three stage sets (Name / Description / KeyPoints).
+   Extract all fields from the attached/selected Learning Request Brief. Required fields: LearningTopic, TargetAudience, LearningGoals, and Stage1Name / Stage1Description / Stage1KeyPoints. Stage 2 and Stage 3 are optional complete sets (Name / Description / KeyPoints); supplied stages must be consecutive. Treat blank values and unchanged `{Field}` placeholders as missing. If a required field is missing, a stage is incomplete, or Stage 3 is supplied without Stage 2, ask the user to complete or correct the brief before generating. Do not invent missing stages.
 
 2. **Apply the mapping**  
-   Use `mapping.md` (or the embedded rules below) to place each field into the correct dashboard component. Do not invent stages beyond the three supplied.
+   Use `mapping/mapping.md` to place each field into the correct dashboard component. Include exactly the complete stages supplied (1-3).
 
 3. **Ground the content**  
    If `{AuthoritativeSource}` is present, read it and base facts on it. Never fabricate product behaviour, URLs, or claims. Mark any unverified detail with a visible amber warning callout.
@@ -76,7 +78,7 @@ Do not switch to a different design system. This file is the source of truth for
    - Footer with owner and source notes.
 
 5. **Validate**  
-   Confirm: the only script is the inline `<script>` block from the reference page (no external scripts, libraries or CDNs), no `on*` handlers, no external assets, keyboard-reachable flip cards, prints fully. Copy the design-system CSS verbatim.
+   Confirm: the only script is the inline `<script>` block from the reference page (no external scripts, libraries or CDNs), no `on*` handlers, no external assets, keyboard-reachable flip cards, prints fully. Copy the design-system CSS verbatim. Check that the tab count is one overview plus the supplied stage count, all navigation targets exist, no unchanged field placeholders remain, and no reference-topic content remains unless it is supported by the brief.
 
 6. **Deliver**  
    Save the HTML and give a short summary: topic, stages, any placeholders left, and how to publish the page: save the HTML file, upload it to a SharePoint document library, and open it from there.

@@ -28,7 +28,7 @@ Select or attach a Learning Request Brief .docx generated from the form first. T
 ## Form → Brief → Dashboard flow
 
 1. Upload `learning-request-brief-template.docx` (in [`demo/sample-files/`](./demo/sample-files/)) to a SharePoint library and create a Structured Document Generation form from it.
-2. Share the form. Required fields: LearningTopic, TargetAudience, LearningGoals and the three stage sets (Stage*N*Name, Stage*N*Description, Stage*N*KeyPoints).
+2. Share the form. Required fields: LearningTopic, TargetAudience, LearningGoals and the Stage 1 set (Stage1Name, Stage1Description, Stage1KeyPoints). Stage 2 and Stage 3 are optional complete sets; Stage 3 requires Stage 2. Leave unused stage fields blank.
 3. Each submission produces a filled Learning Request Brief .docx.
 4. Select or attach the brief and invoke the Learning Designer skill.
 5. Save the HTML file, upload it to a SharePoint document library, and open it from there. Don't paste it into a SharePoint text web part: text web parts remove the page's styles and script, so the layout, tabs and quizzes stop working.

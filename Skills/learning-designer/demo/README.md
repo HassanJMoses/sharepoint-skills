@@ -18,3 +18,10 @@ Sample files for the [learning-designer](../) skill. This folder is for humans b
 ## What to expect
 
 The skill produces one self-contained HTML learning dashboard that follows the layout of `learning-designer/references/test-output-custom-skills.html` (the bundled reference for the same topic), with the content of your brief and up to 3 stages.
+
+## Verification cases
+
+- Use a non-PowerPoint topic, such as team onboarding. Confirm that headings, cards, checks, images and footer use only the new brief's content; no sample-topic text should remain.
+- Supply only Stage 1, leaving the Stage 2 and Stage 3 sets blank. Expect Overview plus one stage tab, one path tile, and no navigation to missing stages. Repeat with two and three complete stages.
+- Leave a required field blank, supply an incomplete stage, or supply Stage 3 without Stage 2. Expect a request to correct the brief, not an invented stage or a partially generated dashboard.
+- Test tabs by mouse and arrow keys, next-step buttons, and flip cards by hover and keyboard focus. In the reference button quizzes, correct and incorrect choices should show topic-neutral feedback.

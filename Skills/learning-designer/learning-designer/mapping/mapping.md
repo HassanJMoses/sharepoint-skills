@@ -12,12 +12,21 @@ Maps fields from the Learning Request Brief (Structured Document Generation outp
 | `{Stage1Name}`       | Learning-path rail tile 1 + Stage 1 `<h2>`   | First stage title |
 | `{Stage1Description}`| Stage 1 lead paragraph                       | |
 | `{Stage1KeyPoints}`  | Stage 1 content (bullets or Why/When/How/Check blocks) | |
-| `{Stage2Name}`       | Learning-path rail tile 2 + Stage 2 `<h2>`   | |
-| `{Stage2Description}`| Stage 2 lead                                 | |
-| `{Stage2KeyPoints}`  | Stage 2 content                              | |
-| `{Stage3Name}`       | Learning-path rail tile 3 + Stage 3 `<h2>`   | |
-| `{Stage3Description}`| Stage 3 lead                                 | |
-| `{Stage3KeyPoints}`  | Stage 3 content                              | |
+
+## Optional stage sets
+
+Stage 2 and Stage 3 are optional complete sets. Supplied stages must be consecutive: Stage 3 requires Stage 2. If any supplied stage is incomplete, ask the user to correct the brief before generating.
+
+| Brief field          | Dashboard component                          | Notes |
+|----------------------|----------------------------------------------|-------|
+| `{Stage2Name}`       | Learning-path rail tile 2 + Stage 2 `<h2>`   | Required if Stage 2 is supplied |
+| `{Stage2Description}`| Stage 2 lead                                 | Required if Stage 2 is supplied |
+| `{Stage2KeyPoints}`  | Stage 2 content                              | Required if Stage 2 is supplied |
+| `{Stage3Name}`       | Learning-path rail tile 3 + Stage 3 `<h2>`   | Required if Stage 3 is supplied |
+| `{Stage3Description}`| Stage 3 lead                                 | Required if Stage 3 is supplied |
+| `{Stage3KeyPoints}`  | Stage 3 content                              | Required if Stage 3 is supplied |
+
+Blank values and unchanged `{Field}` placeholders count as missing. Include exactly the complete stages supplied (1-3). Remove unused stage tabs, panels and path tiles, and retarget next-step buttons to an existing stage or back to the overview.
 
 ## Optional fields
 
